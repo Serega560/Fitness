@@ -1,0 +1,193 @@
+.subscription {
+  background-color: #f8f9fc;
+  padding: 120px 0;
+  position: relative;
+}
+
+.subscription h2 {
+  padding: 0;
+  margin: 0;
+  font-family: $ff-alumni;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 54px;
+  margin-bottom: 38px;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  color: #102654;
+}
+
+.subscription__list {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  column-gap: 50px;
+  margin-bottom: 51px;
+  z-index: 1;
+  width: 350px;
+  border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+
+
+  .subscription__item {
+    padding-bottom: 14px;
+    border-bottom: 2px solid transparent;
+
+    @include hover-focus {
+      @media (hover: hover) {
+        &:hover:not(.focus-visible) {
+          border-bottom: 2px solid rgba(237, 2, 51, 1);
+        }
+      }
+
+      a {
+        color: rgba(16, 38, 84, 1);
+      }
+    }
+
+    @include active {
+      &:active:not(.focus-visible) {
+        border-bottom: 2px solid rgba(237, 2, 51, 1);
+      }
+    }
+  }
+}
+
+.subscription__item a {
+  font-size: 20px;
+  line-height: 20px;
+  color: #10265480;
+  cursor: pointer;
+}
+
+a[disabled] .subscription__item {
+  pointer-events: none;
+  opacity: 0.2;
+}
+
+.subscription__cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  column-gap: 40px;
+  position: relative;
+  list-style: none;
+}
+
+
+.subscription__cards li {
+  justify-content: center;
+  padding: 65px 78px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 360px;
+  background-color: $color-default-white;
+  position: relative;
+  z-index: 1;
+  border: 7px solid transparent;
+
+  @include hover-focus {
+    @media (hover: hover) {
+      &:hover:not(.focus-visible) {
+        border: 7px solid;
+        border-image: linear-gradient(to right, rgba(209, 10, 66, 1), rgba(0, 53, 159, 1)
+        ) 1;
+        cursor: pointer;
+      }
+    }
+
+    a {
+      background: var(--1, linear-gradient(97deg, #ED0233 17.6%, #003EB7 95.31%));
+      color: $color-default-white;
+      border: 2px solid $color-default-white;
+
+      @include active {
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
+}
+
+.subscription__cards h3 {
+  display: flex;
+  margin: 0;
+  margin-bottom: 11px;
+  color: #102654;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 26px;
+  justify-content: center;
+}
+
+.subscription__time {
+  margin: 0;
+  margin-bottom: 66px;
+  text-align: center;
+  color: #102654;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.subscription__price-block {
+  position: relative;
+
+  svg {
+    color: #ff1553;
+  }
+}
+
+.subscription__price-block .subscription__price--big {
+  font-family: $ff-roboto;
+  font-weight: 700;
+  line-height: 150px;
+  position: absolute;
+  top: -55px;
+  left: 0;
+  font-size: 100px;
+  color: #e8e8e8;
+  z-index: -1;
+}
+
+.subscription__price-block .subscription__price--small {
+  text-align: center;
+  color: #103aae;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 90px;
+  margin: 0;
+  margin-bottom: 20px;
+  display: flex;
+  z-index: 1;
+  margin-left: 19px;
+  margin-right: 19px;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 14px;
+}
+
+.subscription__cards a{
+  border: 2px solid #102654;
+  background-color: inherit;
+  padding: 25px 33px;
+  letter-spacing: 0.04rem;
+  color: #102654;
+  text-transform: uppercase;
+  width: 205px;
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.subscription__block img {
+  position: absolute;
+  bottom: -107px;
+  right: -25px;
+  z-index: 0;
+}

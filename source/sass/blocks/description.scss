@@ -1,0 +1,185 @@
+.description {
+  position: relative;
+}
+
+.description__main {
+  display: flex;
+  padding-top: 120px;
+  padding-bottom: 240px;
+  column-gap: 145px;
+}
+
+.description__block {
+  width: 355px;
+}
+
+.description h2 {
+  margin: 0;
+  font-family: $ff-alumni;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 54px;
+  margin-bottom: 25px;
+  letter-spacing: 0.1rem;
+  color: #102654;
+}
+
+.description span {
+  margin: 0;
+  display: block;
+  margin-bottom: 95px;
+  font-size: 22px;
+  line-height: 22px;
+  color: #102654;
+}
+
+.description p {
+  margin: 0;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: #102654;
+}
+
+.description__media {
+  position: relative;
+  background-color: #102654;
+}
+
+.description__video {
+  position: absolute;
+  left: -62px;
+  top: 288px;
+
+  ::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #14367a20;
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 364px;
+    height: 228px;
+  }
+}
+
+button:disabled {
+  .se {
+    background-color: $color-default-white;
+    opacity: 40%;
+  }
+}
+
+.description__button:hover div {
+  border: 9px solid transparent;
+  border-left: 15px solid #102654;
+  z-index: 11;
+}
+
+.description__button {
+  position: absolute;
+  display: inline-block;
+  border: 2px solid #ed0233;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  top: 65px;
+  left: 128px;
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 72px;
+    height: 72px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: var(--1, linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%));
+  }
+
+  @include active {
+    &:active:not(.focus-visible) {
+      border: 2px solid #102654;
+      background-color: #f8f9fc;
+
+
+      &::before {
+        background-color: $color-default-white;
+        background-image: none;
+        width: 55px;
+        height: 55px;
+      }
+    }
+  }
+
+  @include hover-focus {
+    @media (hover: hover) {
+      border: 2px solid #102654;
+      background-color: #f8f9fc;
+
+      &::before {
+        background-color: $color-default-white;
+        background-image: none;
+      }
+    }
+
+    &.focus-visible:focus {
+      outline: none;
+      outline: 4px solid red;
+      outline-offset: 8px;
+
+      div {
+        border: 9px solid transparent;
+        border-left: 15px solid #102654;
+      }
+    }
+  }
+
+
+  &[disabled] {
+    border: 2px solid #C7CAD2;
+    background-color: $color-default-white;
+    pointer-events: none;
+
+    &::before {
+      background-color: $color-default-white;
+      background-image: none;
+    }
+
+    div {
+      border: 9px solid transparent;
+      border-left: 15px solid #C7CAD2;
+    }
+  }
+}
+
+.description__button div {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-20%, -50%);
+  z-index: 11;
+  border: 9px solid transparent;
+  border-left: 15px solid $color-default-white;
+}
+

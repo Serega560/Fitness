@@ -1,0 +1,50 @@
+.header {
+  background: linear-gradient(90deg, #1c3477 0%, #1c3477 0.01%, #1a3578 39.11%, #73184b 75.5%, #b4022a 100%);
+}
+
+.header__list {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 103px;
+  max-width: 1366px;
+  margin: 0 auto;
+  list-style: none;
+
+
+  @include vp-767() {
+    background-color: #ff1553;
+  }
+
+  a {
+    color: $color-default-white;
+    font-family: $ff-roboto;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 26px;
+
+    @include hover-focus {
+      @media (hover: hover) {
+        &:hover:not(.focus-visible) {
+          color: rgba(28, 51, 116, 1);
+        }
+      }
+
+      &.focus-visible:focus {
+        outline: 2px solid $color-default-white;
+        outline-offset: 10px;
+      }
+    }
+
+    @include active {
+      &:active:not(.focus-visible) {
+      color: rgba(16, 38, 84, 1);
+        border-bottom: 2px solid rgba(16, 38, 84, 1);
+      }
+    }
+
+    &[disabled] {
+      color: rgba(248, 249, 252, 0.8);
+    }
+  }
+}
+
