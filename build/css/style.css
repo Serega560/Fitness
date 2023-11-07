@@ -1318,7 +1318,7 @@ button,
   background: -webkit-gradient(linear, left top, right top, from(#1c3477), color-stop(0.01%, #1c3477), color-stop(39.11%, #1a3578), color-stop(75.5%, #73184b), to(#b4022a));
   background: linear-gradient(90deg, #1c3477 0%, #1c3477 0.01%, #1a3578 39.11%, #73184b 75.5%, #b4022a 100%);
 }
-.hero a button {
+.hero a {
   border: 2px solid #ffffff;
   background-color: inherit;
   padding: 27px 53px;
@@ -1588,6 +1588,8 @@ button:disabled .se {
   background-color: #f8f9fc;
   padding: 120px 0;
   position: relative;
+  -webkit-transition: 3s;
+  transition: 3s;
 }
 
 .subscription h2 {
@@ -2399,6 +2401,11 @@ a[disabled] .subscription__item {
   padding-bottom: 120px;
   background: #f8f9fc;
 }
+.about ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
 .about h2 {
   margin: 0;
@@ -2411,7 +2418,16 @@ a[disabled] .subscription__item {
   color: #102654;
 }
 
-.about__list {
+.about__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 40px;
+     -moz-column-gap: 40px;
+          column-gap: 40px;
+}
+
+.about__controls {
   list-style: none;
   font-size: 18px;
   line-height: 18px;
@@ -2426,33 +2442,238 @@ a[disabled] .subscription__item {
   margin: 0;
   padding: 0;
 }
-.about__list li {
+.about__controls button {
+  color: #102654;
+  background-color: transparent;
   padding: 18px 48px;
   text-align: center;
   width: 260px;
   border: 1px solid rgba(16, 38, 84, 0.2);
+  cursor: pointer;
 }
 @media (hover: hover) and (hover: hover) {
-  .about__list li:hover:not(.focus-visible):hover:not(.focus-visible) {
+  .about__controls button:hover:not(.focus-visible):hover:not(.focus-visible) {
     border: 1px solid rgb(16, 38, 84);
   }
 }
 @media (hover: hover) {
-  .about__list li.focus-visible:focus:hover:not(.focus-visible), .about__list li:focus-visible:hover:not(.focus-visible) {
+  .about__controls button.focus-visible:focus:hover:not(.focus-visible), .about__controls button:focus-visible:hover:not(.focus-visible) {
     border: 1px solid rgb(16, 38, 84);
   }
 }
-.about__list li:active:not(.focus-visible) {
-  background: var(--1, linear-gradient(97deg, #ED0233 17.6%, #003EB7 95.31%));
-  cursor: pointer;
-  border: 1px solid #ffffff;
-}
-.about__list li:active:not(.focus-visible) a {
-  color: #ffffff;
-}
-.about__list li[disabled] {
+.about__controls button[disabled] {
   opacity: 0.5;
   pointer-events: none;
+}
+
+button.is-active {
+  background: var(--1, linear-gradient(97deg, #ED0233 17.6%, #003EB7 95.31%));
+  color: #ffffff;
+}
+
+.accordion {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #F8F9FC;
+}
+.accordion__element {
+  border-top: 2px solid rgba(28, 51, 116, 0.2);
+  width: 860px;
+  position: relative;
+}
+.accordion__element--last {
+  border-bottom: 2px solid rgba(28, 51, 116, 0.2);
+}
+.accordion__button {
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  padding-top: 33px;
+  padding-bottom: 33px;
+  width: 100%;
+  background-color: #F8F9FC;
+}
+.accordion__button:before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 1px;
+  background-color: #102654;
+  top: 45px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+.accordion__button:after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 1px;
+  top: 45px;
+  right: 10px;
+  cursor: pointer;
+  background-color: #102654;
+  z-index: 1;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+@media (hover: hover) and (hover: hover) {
+  .accordion__button:hover:not(.focus-visible):hover:not(.focus-visible) span:after {
+    background-color: #102654;
+  }
+  .accordion__button:hover:not(.focus-visible):hover:not(.focus-visible):before {
+    background-color: #ffffff;
+  }
+  .accordion__button:hover:not(.focus-visible):hover:not(.focus-visible):after {
+    background-color: #ffffff;
+  }
+}
+@media (hover: hover) {
+  .accordion__button:hover:not(.focus-visible).focus-visible:focus:before, .accordion__button:hover:not(.focus-visible):focus-visible:before {
+    background-color: #ffffff;
+  }
+  .accordion__button:hover:not(.focus-visible).focus-visible:focus:after, .accordion__button:hover:not(.focus-visible):focus-visible:after {
+    background-color: #ffffff;
+  }
+}
+@media (hover: hover) {
+  .accordion__button.focus-visible:focus:hover:not(.focus-visible) span:after, .accordion__button:focus-visible:hover:not(.focus-visible) span:after {
+    background-color: #102654;
+  }
+  .accordion__button.focus-visible:focus:hover:not(.focus-visible):before, .accordion__button:focus-visible:hover:not(.focus-visible):before {
+    background-color: #ffffff;
+  }
+  .accordion__button.focus-visible:focus:hover:not(.focus-visible):after, .accordion__button:focus-visible:hover:not(.focus-visible):after {
+    background-color: #ffffff;
+  }
+}
+.accordion__button.focus-visible:focus.focus-visible:focus:before, .accordion__button.focus-visible:focus:focus-visible:before, .accordion__button:focus-visible.focus-visible:focus:before, .accordion__button:focus-visible:focus-visible:before {
+  background-color: #ffffff;
+}
+.accordion__button.focus-visible:focus.focus-visible:focus:after, .accordion__button.focus-visible:focus:focus-visible:after, .accordion__button:focus-visible.focus-visible:focus:after, .accordion__button:focus-visible:focus-visible:after {
+  background-color: #ffffff;
+}
+.accordion__button span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #102654;
+  margin: 0;
+}
+.accordion__button span:after {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 40px;
+  top: 25px;
+  right: 0;
+  border-radius: 50%;
+  z-index: 0;
+  border: 1px solid #102654;
+}
+.accordion__content {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 300;
+  color: #102654;
+  width: 650px;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.is-active button:after {
+  display: none;
+}
+.is-active button:before {
+  background-color: #ffffff;
+}
+.is-active button span:after {
+  background-color: #102654;
+}
+
+[data-tabs=parent] {
+  overflow: hidden;
+}
+[data-tabs=parent].no-transition > [data-tabs=control],
+[data-tabs=parent].no-transition > [data-tabs=content],
+[data-tabs=parent].no-transition > [data-tabs=element] {
+  -webkit-transition: none;
+  transition: none;
+}
+[data-tabs=parent].no-transition-global [data-tabs=control],
+[data-tabs=parent].no-transition-global [data-tabs=content],
+[data-tabs=parent].no-transition-global [data-tabs=element] {
+  -webkit-transition: none;
+  transition: none;
+}
+
+[data-tabs=parent] [data-tabs=content] {
+  position: relative;
+}
+
+[data-tabs=element] {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+  transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+}
+
+[data-tabs=element].for-load {
+  position: static;
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: none;
+  transition: none;
+}
+
+[data-tabs=element].is-active {
+  z-index: 1;
+  visibility: visible;
+  opacity: 1;
+}
+
+[data-accordion-init] > [data-tabs=content],
+[data-accordion-init] > [data-tabs=controls] {
+  display: none;
+}
+[data-accordion-init] [data-tabs=element] {
+  z-index: 1;
+  visibility: visible;
+  position: static;
+  opacity: 1;
+}
+
+[data-tabs=accordion-wrapper] {
+  display: block;
+  max-height: 0;
+  -webkit-transition: max-height 0.3s ease;
+  transition: max-height 0.3s ease;
+  overflow: hidden;
+}
+
+[data-tabs=accordion-content] {
+  overflow: hidden;
+}
+
+[data-tabs=accordion] {
+  overflow: hidden;
+  position: relative;
+  isolation: isolate;
+}
+
+[data-tabs=accordion].is-active > [data-tabs=accordion-wrapper] {
+  max-height: none;
 }
 
 /* @mixin hover-focus {

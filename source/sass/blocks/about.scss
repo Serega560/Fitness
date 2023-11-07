@@ -2,6 +2,12 @@
   padding-top: 120px;
   padding-bottom: 120px;
   background: #f8f9fc;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .about h2 {
@@ -15,7 +21,12 @@
   color: #102654;
 }
 
-.about__list {
+.about__main {
+  display: flex;
+  column-gap: 40px;
+}
+
+.about__controls {
   list-style: none;
   font-size: 18px;
   line-height: 18px;
@@ -25,11 +36,16 @@
   margin: 0;
   padding: 0;
 
-  li {
+  button {
+    color: #102654;
+    background-color: transparent;
     padding: 18px 48px;
     text-align: center;
     width: 260px;
     border: 1px solid rgba(16, 38, 84, 0.2);
+    cursor: pointer;
+
+
 
     @include hover-focus {
       @media (hover: hover) {
@@ -39,20 +55,17 @@
       }
     }
 
-    @include active {
-      background: var(--1, linear-gradient(97deg, #ED0233 17.6%, #003EB7 95.31%));
-      cursor: pointer;
-      border: 1px solid $color-default-white;
-
-      a {
-        color: $color-default-white;
-      }
-    }
-
     &[disabled] {
       opacity: 0.5;
       pointer-events: none;
     }
   }
 }
+
+button.is-active{
+  background: var(--1, linear-gradient(97deg, #ED0233 17.6%, #003EB7 95.31%));
+  color: $color-default-white;
+}
+
+
 

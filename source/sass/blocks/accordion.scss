@@ -1,0 +1,131 @@
+.accordion {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #F8F9FC;
+
+  &__element {
+    border-top: 2px solid rgba(28, 51, 116, 0.2);
+    width: 860px;
+    position: relative;
+
+    &--last {
+      border-bottom: 2px solid rgba(28, 51, 116, 0.2);
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    padding-top: 33px;
+    padding-bottom: 33px;
+    width: 100%;
+    background-color: #F8F9FC;
+
+    &:before {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 1px;
+      background-color: #102654;
+      top: 45px;
+      right: 10px;
+      cursor: pointer;
+      z-index: 1;
+    }
+
+    &:after {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 1px;
+      top: 45px;
+      right: 10px;
+      cursor: pointer;
+      background-color: #102654;
+      z-index: 1;
+      transform: rotate(90deg);
+    }
+
+    @include hover-focus {
+      @media (hover: hover) {
+        &:hover:not(.focus-visible) {
+          span:after {
+            background-color: #102654;
+          }
+
+          &:before {
+            background-color: $color-default-white;
+          }
+
+          &:after {
+            background-color: $color-default-white;
+          }
+        }
+      }
+
+      &.focus-visible:focus,
+      &:focus-visible {
+        &:before {
+          background-color: $color-default-white;
+        }
+
+        &:after {
+          background-color: $color-default-white;
+        }
+      }
+    }
+
+    span {
+      display: flex;
+      justify-content: left;
+      font-size: 24px;
+      line-height: 24px;
+      font-weight: 400;
+      color: #102654;
+      margin: 0;
+
+      &:after {
+        position: absolute;
+        content: "";
+        width: 40px;
+        height: 40px;
+        top: 25px;
+        right: 0;
+        border-radius: 50%;
+        z-index: 0;
+        border: 1px solid #102654;
+      }
+    }
+  }
+
+  &__content {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 300;
+    color: #102654;
+    width: 650px;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+}
+
+.is-active {
+  button {
+    &:after {
+      display: none;
+    }
+
+    &:before {
+      background-color: $color-default-white;
+    }
+
+    span {
+      &:after {
+      background-color: #102654;
+      }
+    }
+  }
+}
