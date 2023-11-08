@@ -5,17 +5,39 @@
 .header__list {
   display: flex;
   justify-content: space-between;
-  padding: 30px 103px;
   max-width: 1366px;
+  padding-top: 31px;
+  padding-bottom: 26px;
   margin: 0 auto;
   list-style: none;
 
 
-  @include vp-767() {
-    background-color: #ff1553;
+  @include vp-1365 {
+    max-width: 767px;
   }
 
-  a {
+  .header__logo {
+    width: 120px;
+    height: 26px;
+
+    @include vp-1365 {
+      width: 111px;
+      height: 24px;
+    }
+
+    @include vp-767 {
+      width: 102px;
+      height: 22px;
+    }
+  }
+
+  @include vp-767 {
+    padding-bottom: 16px;
+    padding-top: 16px;
+  }
+
+
+  .header__number a {
     color: $color-default-white;
     font-family: $ff-roboto;
     font-weight: 700;
@@ -37,7 +59,7 @@
 
     @include active {
       &:active:not(.focus-visible) {
-      color: rgba(16, 38, 84, 1);
+        color: rgba(16, 38, 84, 1);
         border-bottom: 2px solid rgba(16, 38, 84, 1);
       }
     }
@@ -45,6 +67,17 @@
     &[disabled] {
       color: rgba(248, 249, 252, 0.8);
     }
+
+    @include vp-1365 {
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    @include vp-767 {
+      font-size: 22px;
+      line-height: 22px;
+    }
   }
 }
+
 

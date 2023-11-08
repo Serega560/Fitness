@@ -21,29 +21,16 @@
 
 .sale__price {
   background-color: rgba(237, 2, 51, 1);
-  padding: 40px 45px 45px;
+  padding: 42px 47px 45px 46px;
   color: $color-default-white;
-
-  span {
-    font-size: 70px;
-    line-height: 70px;
-    font-weight: 700;
-  }
-
-  span:first-child {
-    font-size: 26px;
-    line-height: 26px;
-    font-weight: 700;
-    display: block;
-    margin-bottom: 15px;
-  }
 
   p {
     font-size: 18px;
     line-height: 24px;
     font-weight: 300;
     margin: 0;
-    margin-bottom: 174px;
+    margin-top: 25px;
+    margin-bottom: 167px;
   }
 
   a {
@@ -52,6 +39,7 @@
     font-size: 14px;
     line-height: 14px;
     border-bottom: 1px solid $color-default-white;
+    letter-spacing: 0.05rem;
 
     @include hover {
       @media (hover: hover) {
@@ -104,6 +92,8 @@
   h3 {
     margin: 0;
     margin-bottom: 10px;
+    font-size: 26px;
+    line-height: 26px;
   }
 
   p {
@@ -150,3 +140,17 @@
   }
 }
 
+.sale__price .sale__price-min {
+  font-size: 70px;
+  line-height: 70px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.sale__price .sale__price-year {
+  font-size: 26px;
+  line-height: 26px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 15px;
+}

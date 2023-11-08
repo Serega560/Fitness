@@ -12,7 +12,7 @@
   font-weight: 600;
   font-size: 54px;
   line-height: 54px;
-  margin-bottom: 38px;
+  margin-bottom: 35px;
   letter-spacing: 0.1rem;
   text-align: center;
   color: #102654;
@@ -25,14 +25,14 @@
   display: flex;
   justify-content: center;
   column-gap: 50px;
-  margin-bottom: 51px;
+  margin-bottom: 33px;
   z-index: 1;
   width: 350px;
   border-bottom: 2px solid rgba(120, 120, 120, 0.2);
 
 
   .subscription__item {
-    padding-bottom: 14px;
+    padding-bottom: 5px;
     border-bottom: 2px solid transparent;
 
     @include hover-focus {
@@ -80,7 +80,7 @@ a[disabled] .subscription__item {
 
 .subscription__cards li {
   justify-content: center;
-  padding: 65px 78px;
+  padding: 62px 71px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -115,7 +115,7 @@ a[disabled] .subscription__item {
 .subscription__cards h3 {
   display: flex;
   margin: 0;
-  margin-bottom: 11px;
+  margin-bottom: 8px;
   color: #102654;
   font-weight: 700;
   font-size: 26px;
@@ -160,7 +160,7 @@ a[disabled] .subscription__item {
   font-size: 60px;
   line-height: 90px;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 36px;
   display: flex;
   z-index: 1;
   margin-left: 19px;
@@ -188,7 +188,9 @@ a[disabled] .subscription__item {
 
 .subscription__block img {
   position: absolute;
-  bottom: -107px;
-  right: -25px;
+  bottom: -259px;
+  right: -194px;
   z-index: 0;
+  width: 380px;
+  height: 486px;
 }
