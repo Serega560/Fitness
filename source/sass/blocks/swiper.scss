@@ -32,11 +32,15 @@
         .swiper-slide__description {
           bottom: 0;
         }
+
+        .swiper-slide__name {
+          display: none;
+        }
       }
     }
 
     &.focus-visible:focus {
-     outline: 4px solid #ff1553;
+      outline: 4px solid #ff1553;
       outline-offset: -4px;
     }
   }
@@ -59,7 +63,6 @@
   }
 }
 
-
 .swiper-slide__description {
   position: absolute;
   bottom: -341px;
@@ -69,7 +72,7 @@
   padding: 45px 40px 50px;
   color: $color-default-white;
   background-color: #102654E3;
-  transition: 1s;
+  transition: .5s;
 
   p {
     font-size: 22px;
@@ -103,10 +106,6 @@
     line-height: 22px;
   }
 }
-
-//.swiper-slide:hover .swiper-slide__description {
-//  bottom: 0;
-//}
 
 
 // Кнопки

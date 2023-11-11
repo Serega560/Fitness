@@ -1,7 +1,5 @@
-import Swiper from "../vendor/swiper.js";
-
-const initSwiper = () => {
-  new Swiper('.swiper-container', {
+const initSwiperJury = () => {
+  new window.Swiper('.swiper-container', {
 
     // Параметры
     direction: 'horizontal',
@@ -16,7 +14,7 @@ const initSwiper = () => {
 
     mousewheel: {
       sensitivity: 1,
-      eventsTarget: '.swiper-slide'
+      eventsTarget: '.reviews-slide'
     },
 
     breakpoints: {
@@ -39,4 +37,4 @@ const initSwiper = () => {
   });
 }
 
-export {initSwiper};
+export {initSwiperJury};

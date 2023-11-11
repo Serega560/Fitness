@@ -1,10 +1,11 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
-import {initSwiper} from "./modules/slider.js";
+import {initSwiperJury} from "./modules/slider-jury.js";
 import {initVideo} from "./modules/video.js";
 import {initAccordions} from "./modules/accordion/init-accordion.js";
 import {initTabs} from "./modules/tabs/init-tabs.js";
+import {initSwiperReviews} from "./modules/slider-reviews.js";
 
 // ---------------------------------
 
@@ -25,10 +26,11 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
-    initSwiper();
+    initSwiperJury();
     // initVideo();
     initAccordions();
     initTabs();
+    initSwiperReviews();
   });
 });
 

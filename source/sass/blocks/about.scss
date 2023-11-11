@@ -8,17 +8,17 @@
     margin: 0;
     padding: 0;
   }
-}
 
-.about h2 {
-  margin: 0;
-  font-family: $ff-alumni;
-  font-weight: 600;
-  font-size: 54px;
-  line-height: 54px;
-  margin-bottom: 51px;
-  letter-spacing: 0.1rem;
-  color: #102654;
+  h2 {
+    margin: 0;
+    font-family: $ff-alumni;
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 54px;
+    margin-bottom: 51px;
+    letter-spacing: 0.1rem;
+    color: #102654;
+  }
 }
 
 .about__main {
@@ -46,7 +46,6 @@
     cursor: pointer;
 
 
-
     @include hover-focus {
       @media (hover: hover) {
         &:hover:not(.focus-visible) {
@@ -60,12 +59,13 @@
       pointer-events: none;
     }
   }
+
+  .is-active {
+    background: var(--1, linear-gradient(97deg, #ED0233 17.6%, #003EB7 95.31%));
+    color: $color-default-white;
+  }
 }
 
-button.is-active{
-  background: var(--1, linear-gradient(97deg, #ED0233 17.6%, #003EB7 95.31%));
-  color: $color-default-white;
-}
 
 
 

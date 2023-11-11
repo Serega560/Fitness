@@ -1,8 +1,16 @@
 .subscription {
   background-color: #f8f9fc;
   padding: 120px 0;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.subscription__block {
   position: relative;
-  transition: 3s;
 }
 
 .subscription h2 {
@@ -18,22 +26,39 @@
   color: #102654;
 }
 
-.subscription__list {
+.subscription__buttons {
   margin: 0 auto;
   padding: 0;
   list-style: none;
   display: flex;
   justify-content: center;
-  column-gap: 50px;
+  column-gap: 39px;
   margin-bottom: 33px;
   z-index: 1;
-  width: 350px;
-  border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+  width: 370px;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: "";
+    width: 350px;
+    height: 1px;
+    background-color: rgba(120, 120, 120, 0.2);
+    bottom: 0;
+    left: 10px;
+  }
 
 
-  .subscription__item {
-    padding-bottom: 5px;
+  button {
+    padding-bottom: 10px;
+    border: none;
     border-bottom: 2px solid transparent;
+    font-size: 20px;
+    line-height: 20px;
+    color: #10265480;
+    cursor: pointer;
+    background-color: transparent;
+
 
     @include hover-focus {
       @media (hover: hover) {
@@ -52,19 +77,12 @@
         border-bottom: 2px solid rgba(237, 2, 51, 1);
       }
     }
+
+    &[disabled] {
+      pointer-events: none;
+      opacity: 0.2;
+    }
   }
-}
-
-.subscription__item a {
-  font-size: 20px;
-  line-height: 20px;
-  color: #10265480;
-  cursor: pointer;
-}
-
-a[disabled] .subscription__item {
-  pointer-events: none;
-  opacity: 0.2;
 }
 
 .subscription__cards {
@@ -170,7 +188,7 @@ a[disabled] .subscription__item {
   column-gap: 14px;
 }
 
-.subscription__cards a{
+.subscription__cards a {
   border: 2px solid #102654;
   background-color: inherit;
   padding: 25px 33px;
@@ -188,9 +206,9 @@ a[disabled] .subscription__item {
 
 .subscription__block img {
   position: absolute;
-  bottom: -259px;
-  right: -194px;
+  bottom: -268px;
+  right: -97px;
   z-index: 0;
-  width: 380px;
-  height: 486px;
+  width: 385px;
+  height: 490px;
 }

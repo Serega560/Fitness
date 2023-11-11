@@ -112,7 +112,7 @@
   }
 }
 
-.is-active {
+.accordion__element.is-active {
   button {
     &:after {
       display: none;
@@ -124,7 +124,7 @@
 
     span {
       &:after {
-      background-color: #102654;
+        background-color: #102654;
       }
     }
   }
