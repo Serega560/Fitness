@@ -1,41 +1,22 @@
+const swiperReviews = document.querySelector('[data-swiper="reviews"]');
+const swiperButtonPrev = document.querySelector('[data-swiper-button-prev]');
+const swiperButtonNext = document.querySelector('[data-swipe-button-next]');
+
+
 const initSwiperReviews = () => {
-  return new window.Swiper('.reviews-container', {
+  return new window.Swiper(swiperReviews, {
 
     // Параметры
     direction: 'horizontal',
-    loop: true,
+    loop: false,
     effect: 'slider',
+    slidesPerView: 1,
 
     // Кнопки
     navigation: {
-      nextEl: '.reviews-slider__arrow--next',
-      prevEl: '.reviews-slider__arrow--prev',
+      nextEl: swiperButtonNext,
+      prevEl: swiperButtonPrev,
     },
-
-    mousewheel: {
-      sensitivity: 1,
-      eventsTarget: '.swiper-slide'
-    },
-
-    breakpoints: {
-      1366: {
-        slidesPerView: 1
-      },
-
-      1120: {
-        slidesPerView: 1, spaceBetween: 20,
-      },
-
-      768: {
-        slidesPerView: 2, spaceBetween: 32,
-      },
-
-      0: {
-        slidesPerView: 1, spaceBetween: 32,
-      },
-    },
-
-    grabCursor: true, slideToClickedSlide: true,
   });
 }
 
