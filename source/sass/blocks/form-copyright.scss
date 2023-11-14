@@ -1,0 +1,99 @@
+.form-copyright {
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  background-color: #102654;
+  width: 100%;
+  padding: 60px 170px 60px 0px;
+  display: flex;
+  justify-content: right;
+
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    width: 410px;
+  }
+
+  fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    display: flex;
+    column-gap: 30px;
+    margin-bottom: 27px;
+    align-items: center;
+  }
+
+  h2 {
+    padding: 0;
+    margin: 0;
+    font-family: $ff-alumni;
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 54px;
+    margin-bottom: 31px;
+    letter-spacing: 0.1rem;
+    color: $color-default-white;
+  }
+
+  input {
+    padding: 12px 5px 5px 0;
+    &:hover {
+      border-bottom: 1px solid rgba(255, 255, 255, 1);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+  }
+
+  input[type="text"] {
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: #102654;
+    width: 190px;
+    color: $color-default-white;
+
+
+  }
+
+  input[type="number"] {
+    border: none;
+    background-color: #102654;
+    width: 190px;
+    border: 1px solid $color-default-white;
+    color: $color-default-white;
+  }
+
+  input::placeholder {
+    color: $color-default-white;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  span {
+    color: $color-default-white;
+  }
+
+  button {
+    color: $color-default-white;
+    width: 410px;
+    display: flex;
+    justify-content: center;
+    padding: 26px 56px;
+
+  }
+}

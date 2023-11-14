@@ -1,0 +1,123 @@
+.footer {
+  background-color: rgba(3, 10, 26, 1);
+  padding-top: 35px;
+  padding-bottom: 37px;
+
+  .footer__main {
+    display: flex;
+
+    .footer__logo {
+      display: flex;
+      align-items: center;
+      margin-right: 255px;
+      @include hover {
+        @media (hover: hover) {
+          &:hover:not(.focus-visible) {
+            opacity: 0.6;
+          }
+        }
+      }
+      @include focus {
+        &.focus-visible:focus {
+          outline: none;
+          outline: 1px solid $color-default-white;
+          outline-offset: 7px;
+        }
+      }
+    }
+  }
+
+  a {
+    margin-right: auto;
+    color: $color-default-white;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    column-gap: 39px;
+    align-items: center;
+  }
+
+  .footer__socials {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    column-gap: 10px;
+    margin-left: auto;
+    align-items: center;
+    padding-top: 2px;
+
+    svg {
+      background-color: $color-default-white;
+      border-radius: 50%;
+      width: 25px;
+      height: 25px;
+      padding: 5px;
+      color: rgba(3, 10, 26, 1);
+
+      @include hover-focus {
+        @media (hover: hover) {
+          &:hover:not(.focus-visible) {
+            background-color: rgba(16, 58, 174, 1);
+            color: $color-default-white;
+          }
+        }
+      }
+
+      @include active {
+        &:active:not(.focus-visible) {
+          color: $color-default-white;
+          background-color: #102654;
+        }
+      }
+    }
+
+    a {
+      &[disabled] {
+        pointer-events: none;
+        opacity: 0.6;
+      }
+    }
+  }
+}
+
+.footer__nav {
+  a {
+    border: 1px solid transparent;
+    font-size: 14px;
+    line-height: 22px;
+
+    @include hover {
+      @media (hover: hover) {
+        &:hover:not(.focus-visible) {
+          padding-bottom: 10px;
+          border-bottom: 1px solid $color-default-white;
+        }
+      }
+    }
+
+    @include active {
+      &:active:not(.focus-visible) {
+        border: 1px solid transparent;
+      }
+    }
+
+    @include focus {
+      &.focus-visible:focus {
+        outline: none;
+        outline: 1px solid $color-default-white;
+        outline-offset: 10px;
+      }
+    }
+
+    &[disabled] {
+      pointer-events: none;
+      opacity: 0.4;
+    }
+  }
+}
+

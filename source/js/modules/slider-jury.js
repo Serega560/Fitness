@@ -1,5 +1,9 @@
+const swiperJury = document.querySelector('[data-swiper="jury"]');
+const swiperButtonPrev = document.querySelector('[data-swiper-button-prev="jury"]');
+const swiperButtonNext = document.querySelector('[data-swiper-button-next="jury"]');
+
 const initSwiperJury = () => {
-  new window.Swiper('.swiper-container', {
+  new window.Swiper(swiperJury, {
 
     // Параметры
     direction: 'horizontal',
@@ -8,8 +12,8 @@ const initSwiperJury = () => {
 
     // Кнопки
     navigation: {
-      nextEl: '.swiper-slider__arrow--next',
-      prevEl: '.swiper-slider__arrow--prev',
+      nextEl: swiperButtonNext,
+      prevEl: swiperButtonPrev,
     },
 
     mousewheel: {

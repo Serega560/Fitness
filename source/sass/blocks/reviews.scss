@@ -1,5 +1,5 @@
 .reviews {
-  padding: 120px 0;
+  padding: 114px 0 120px;
 
   .reviews-container {
     width: 720px;
@@ -24,6 +24,7 @@
 
   .reviews__mans {
     display: flex;
+    padding-bottom: 0;
   }
 
   .reviews__man {

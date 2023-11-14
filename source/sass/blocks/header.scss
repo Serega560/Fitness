@@ -65,7 +65,8 @@
     }
 
     &[disabled] {
-      color: rgba(248, 249, 252, 0.8);
+      opacity: 0.5;
+      pointer-events: none;
     }
 
     @include vp-1365 {
