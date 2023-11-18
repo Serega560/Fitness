@@ -8,10 +8,32 @@
   margin-bottom: 45px;
   letter-spacing: 0.1rem;
   color: #102654;
+
+  @include vp-1365 {
+    font-size: 42px;
+    line-height: 42px;
+    text-align: center;
+    margin-bottom: 38px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 41px;
+  }
 }
 
 .swiper__block {
   position: relative;
+
+  @include vp-1365 {
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+
+  @include vp-767 {
+    padding: 0 47px;
+  }
 }
 
 .swiper-container {
@@ -20,6 +42,14 @@
 
 .swiper-wrapper {
   padding-bottom: 120px;
+
+  @include vp-1365 {
+    padding-bottom: 99px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 70px;
+  }
 }
 
 .swiper-slide {
@@ -48,6 +78,19 @@
 
 .swiper-slide__image-name {
   position: relative;
+
+  img {
+
+    @include vp-1365 {
+      height: 294px;
+    }
+
+    @include vp-1365 {
+      height: 274px;
+      width: 226px;
+      object-fit: cover;
+    }
+  }
 }
 
 .swiper-slide__name {
@@ -55,12 +98,47 @@
   color: $color-default-white;
   font-size: 22px;
   line-height: 22px;
-  bottom: 2px;
+  bottom: 3px;
   right: 66px;
 
-  &--center {
-    right: 52px;
+  @include vp-1365 {
+    font-size: 20px;
+    line-height: 20px;
+    bottom: 6px;
+    right: 76px;
+
+    @include vp-1365 {
+      right: 35px;
+      letter-spacing: 0.06rem;
+    }
   }
+
+  &--center {
+    right: 42px;
+
+    @include vp-1365 {
+      right: 46px;
+      letter-spacing: 0.06rem;
+    }
+
+    @include vp-767 {
+      right: 25px;
+    }
+  }
+
+  &--left {
+    right: 55px;
+
+    @include vp-1365 {
+      right: 46px;
+      letter-spacing: 0.06rem;
+    }
+
+    @include vp-767 {
+      right: 25px;
+    }
+  }
+
 }
 
 .swiper-slide__description {
@@ -122,8 +200,23 @@
   border: none;
   background: transparent;
 
+  @include vp-1365 {
+    top: 208px;
+    left: 38px;
+  }
+
+  @include vp-767 {
+    left: 13px;
+    top: 197px;
+  }
+
   svg {
     color: #102654;
+
+    @include vp-767 {
+      width: 10px;
+      height: 19px;
+    }
   }
 
   @include hover-focus {
@@ -174,5 +267,15 @@
 .swiper-slider__arrow--next {
   transform: rotate(180deg);
   left: 1310px;
+
+  @include vp-1365 {
+    left: 714px;
+    top: 212px;
+  }
+
+  @include vp-767 {
+    left: 293px;
+    top: 192px;
+  }
 }
 

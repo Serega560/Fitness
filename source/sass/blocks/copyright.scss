@@ -3,6 +3,14 @@
   color: #102654;
   width: 100%;
 
+  @include vp-1365 {
+    padding: 106px 48px 99px 133px;
+  }
+
+  @include vp-767 {
+    padding: 67px 15px 68px;
+  }
+
   h2 {
     padding: 0;
     margin: 0;
@@ -13,10 +21,27 @@
     margin-bottom: 40px;
     letter-spacing: 0.1rem;
     color: #102654;
+
+    @include vp-1365 {
+      font-size: 42px;
+      line-height: 42px;
+    }
+
+    @include vp-767 {
+      font-size: 32px;
+      line-height: 32px;
+      letter-spacing: 0.06rem;
+      margin-bottom: 37px;
+    }
   }
 
   .copyright__info {
     display: flex;
+    flex-wrap: wrap;
+
+    @include vp-767 {
+      row-gap: 27px;
+    }
   }
 
   .copyright__address-schedule {
@@ -25,6 +50,17 @@
     row-gap: 15px;
     padding-right: 50px;
     border-right: 1px solid rgba(116, 129, 156, 1);
+
+    @include vp-1365 {
+      row-gap: 27px;
+      padding-right: 82px;
+    }
+
+    @include vp-767 {
+      padding: 0;
+      border-right: none;
+      margin-right: 20px;
+    }
   }
 
   .copyright__telephone-email {
@@ -32,6 +68,15 @@
     flex-direction: column;
     row-gap: 15px;
     padding-left: 69px;
+
+    @include vp-1365 {
+      padding-left: 59px;
+      row-gap: 27px;
+    }
+
+    @include vp-767 {
+      padding: 0;
+    }
   }
 
   span {
@@ -39,6 +84,17 @@
     line-height: 24px;
     margin-bottom: 5px;
     display: block;
+
+    @include vp-1365 {
+      font-size: 22px;
+      line-height: 22px;
+      margin-bottom: 11px;
+    }
+
+    @include vp-767 {
+      font-size: 20px;
+      line-height: 20px;
+    }
   }
 
   p {

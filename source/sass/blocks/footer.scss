@@ -3,13 +3,46 @@
   padding-top: 35px;
   padding-bottom: 37px;
 
+  @include vp-1365 {
+    padding-top: 39px;
+    padding-bottom: 38px;
+  }
+
+  @include vp-767 {
+    padding-top: 30px;
+    padding-bottom: 38px;
+  }
+
   .footer__main {
     display: flex;
+    flex-wrap: wrap;
 
     .footer__logo {
       display: flex;
       align-items: center;
       margin-right: 255px;
+      width: 109px;
+
+      img {
+
+        @include vp-767 {
+          width: 90px;
+          height: 15px;
+        }
+      }
+
+      @include vp-1365 {
+        margin-right: 43px;
+        width: 99px;
+      }
+
+      @include vp-767 {
+        width: 90px;
+        height: 14px;
+        margin: 0;
+        margin-bottom: 28px;
+      }
+
       @include hover {
         @media (hover: hover) {
           &:hover:not(.focus-visible) {
@@ -37,8 +70,19 @@
     padding: 0;
     list-style: none;
     display: flex;
-    column-gap: 39px;
+    flex-wrap: wrap;
+    column-gap: 38px;
     align-items: center;
+
+    @include vp-1365 {
+      column-gap: 29px;
+    }
+
+    @include vp-767 {
+      column-gap: 33px;
+      row-gap: 16px;
+      margin-bottom: 54px;
+    }
   }
 
   .footer__socials {
@@ -46,10 +90,20 @@
     padding: 0;
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     column-gap: 10px;
     margin-left: auto;
     align-items: center;
-    padding-top: 2px;
+    padding-top: 5px;
+
+    @include vp-1365 {
+      padding-top: 6px;
+    }
+
+    @include vp-767 {
+      padding: 0;
+      margin: 0 auto;
+    }
 
     svg {
       background-color: $color-default-white;
