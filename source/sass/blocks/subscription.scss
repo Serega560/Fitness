@@ -1,7 +1,8 @@
 .subscription {
   background-color: #f8f9fc;
-  padding: 120px 0;
+  padding: 122px 0;
   position: relative;
+  overflow-x: hidden;
 
   @include vp-1365 {
     padding: 101px 0;
@@ -331,11 +332,11 @@
 
 .subscription__block img {
   position: absolute;
-  bottom: -145px;
-  right: -94px;
+  bottom: -140px;
+  right: -95px;
   z-index: 0;
-  width: 385px;
-  height: 490px;
+  width: 383px;
+  height: 491px;
 
   @include vp-1365 {
     bottom: -149px;

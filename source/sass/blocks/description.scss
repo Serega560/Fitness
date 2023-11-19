@@ -59,7 +59,7 @@
 .description span {
   margin: 0;
   display: block;
-  margin-bottom: 95px;
+  margin-bottom: 94px;
   font-size: 22px;
   line-height: 22px;
   color: #102654;
@@ -126,7 +126,7 @@
 
 .description__video {
   position: absolute;
-  left: -62px;
+  left: -63px;
   top: 288px;
 
   ::before {
@@ -187,14 +187,14 @@ button:disabled {
 .description__button {
   position: absolute;
   display: inline-block;
-  border: 1px solid #ed0233;
+  border: 2px solid #ed023350;
   width: 100px;
   height: 100px;
   border-radius: 50%;
   background-color: transparent;
   cursor: pointer;
-  top: 65px;
-  left: 128px;
+  top: 64px;
+  left: 132px;
 
 
   &::before {
@@ -295,16 +295,16 @@ button:disabled {
   position: absolute;
   width: 0;
   height: 0;
-  top: 50%;
+  top: 49%;
   left: 50%;
   transform: translate(-20%, -50%);
   z-index: 11;
-  border: 9px solid transparent;
-  border-left: 15px solid $color-default-white;
+  border: 7px solid transparent;
+  border-left: 12px solid $color-default-white;
 
   @include vp-1365 {
     border: 5px solid transparent;
-    border-left: 8px solid $color-default-white;
+    border-left: 7px solid $color-default-white;
   }
 }
 

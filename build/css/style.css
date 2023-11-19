@@ -1358,7 +1358,7 @@ button,
 .hero a {
   border: 2px solid #ffffff;
   background-color: inherit;
-  padding: 27px 54px 23px;
+  padding: 26px 54px 24px 55px;
   text-transform: uppercase;
   font-size: 12px;
   line-height: 12px;
@@ -1391,7 +1391,7 @@ button,
   -webkit-column-gap: 70px;
      -moz-column-gap: 70px;
           column-gap: 70px;
-  padding-bottom: 110px;
+  padding-bottom: 109px;
 }
 @media (max-width: 1365px) {
   .hero__block {
@@ -1407,10 +1407,10 @@ button,
   }
 }
 .hero__block img {
-  max-height: 524px;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  width: 500px;
+  min-width: 100%;
 }
 @media (max-width: 1365px) {
   .hero__block img {
@@ -1429,7 +1429,7 @@ button,
   display: -ms-flexbox;
   display: flex;
   width: 385px;
-  padding: 62px 0;
+  padding: 63px 0;
 }
 @media (max-width: 1365px) {
   .hero__description {
@@ -1502,7 +1502,7 @@ button,
   line-height: 54px;
   font-family: "Alumni Sans", "Arial", sans-serif;
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 11px;
 }
 @media (max-width: 1365px) {
   .hero__city {
@@ -1527,8 +1527,8 @@ button,
   font-family: "Alumni Sans", "Arial", sans-serif;
   display: block;
   margin: 0;
-  margin-bottom: 50px;
-  letter-spacing: 0.3rem;
+  margin-bottom: 49px;
+  letter-spacing: 0.29rem;
 }
 @media (max-width: 1365px) {
   .hero__title {
@@ -1620,7 +1620,7 @@ button,
 .description span {
   margin: 0;
   display: block;
-  margin-bottom: 95px;
+  margin-bottom: 94px;
   font-size: 22px;
   line-height: 22px;
   color: #102654;
@@ -1690,7 +1690,7 @@ button,
 
 .description__video {
   position: absolute;
-  left: -62px;
+  left: -63px;
   top: 288px;
 }
 .description__video ::before {
@@ -1751,14 +1751,14 @@ button:disabled .se {
 .description__button {
   position: absolute;
   display: inline-block;
-  border: 1px solid #ed0233;
+  border: 2px solid rgba(237, 2, 51, 0.3137254902);
   width: 100px;
   height: 100px;
   border-radius: 50%;
   background-color: transparent;
   cursor: pointer;
-  top: 65px;
-  left: 128px;
+  top: 64px;
+  left: 132px;
 }
 .description__button::before {
   content: "";
@@ -1877,26 +1877,27 @@ button:disabled .se {
   position: absolute;
   width: 0;
   height: 0;
-  top: 50%;
+  top: 49%;
   left: 50%;
   -webkit-transform: translate(-20%, -50%);
       -ms-transform: translate(-20%, -50%);
           transform: translate(-20%, -50%);
   z-index: 11;
-  border: 9px solid transparent;
-  border-left: 15px solid #ffffff;
+  border: 7px solid transparent;
+  border-left: 12px solid #ffffff;
 }
 @media (max-width: 1365px) {
   .description__button div {
     border: 5px solid transparent;
-    border-left: 8px solid #ffffff;
+    border-left: 7px solid #ffffff;
   }
 }
 
 .subscription {
   background-color: #f8f9fc;
-  padding: 120px 0;
+  padding: 122px 0;
   position: relative;
+  overflow-x: hidden;
 }
 @media (max-width: 1365px) {
   .subscription {
@@ -2308,11 +2309,11 @@ button:disabled .se {
 
 .subscription__block img {
   position: absolute;
-  bottom: -145px;
-  right: -94px;
+  bottom: -140px;
+  right: -95px;
   z-index: 0;
-  width: 385px;
-  height: 490px;
+  width: 383px;
+  height: 491px;
 }
 @media (max-width: 1365px) {
   .subscription__block img {
@@ -2332,7 +2333,7 @@ button:disabled .se {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 115px;
+  padding-top: 112px;
   padding-bottom: 120px;
 }
 @media (max-width: 1365px) {
