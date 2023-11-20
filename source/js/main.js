@@ -27,7 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
     window.form = form;
     form.init();
     initSwiperJury();
-    // initVideo();
+    initVideo();
     initAccordions();
     initTabs();
     initSwiperReviews();
