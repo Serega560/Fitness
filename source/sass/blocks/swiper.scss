@@ -79,7 +79,21 @@
 }
 
 .swiper-slide__image-name {
-  position: relative;
+  display: block;
+
+  @include vp-767 {
+    width: 226px;
+    margin: 0 auto;
+  }
+
+  picture {
+
+    @include vp-767 {
+      display: block;
+      width: 226px;
+      margin: 0 auto;
+    }
+  }
 
   img {
 
@@ -96,48 +110,23 @@
 }
 
 .swiper-slide__name {
-  position: absolute;
   color: $color-default-white;
   font-size: 22px;
   line-height: 22px;
-  bottom: 3px;
-  right: 66px;
+  margin-top: -38px;
+  display: flex;
+  width: 260px;
+  justify-content: center;
 
   @include vp-1365 {
-    bottom: 6px;
-    right: 76px;
     font-size: 20px;
     line-height: 20px;
-
-    @include vp-1365 {
-      right: 35px;
-    }
+    width: 268px;
   }
 
-  &--center {
-    right: 42px;
-
-    @include vp-1365 {
-      right: 46px;
-    }
-
-    @include vp-767 {
-      right: 25px;
-    }
+  @include vp-767 {
+    width: 226px;
   }
-
-  &--left {
-    right: 55px;
-
-    @include vp-1365 {
-      right: 46px;
-    }
-
-    @include vp-767 {
-      right: 25px;
-    }
-  }
-
 }
 
 .swiper-slide__description {
@@ -187,7 +176,7 @@
 
 // Кнопки
 
-.swiper-slider__arrow {
+.swiper-slider__arrow--prev {
   position: absolute;
   width: 16px;
   height: 32px;
@@ -205,7 +194,7 @@
   }
 
   @include vp-767 {
-    left: 13px;
+    left: 25px;
     top: 197px;
   }
 
@@ -264,17 +253,78 @@
 }
 
 .swiper-slider__arrow--next {
+  position: absolute;
+  width: 16px;
+  height: 32px;
+  top: 227px;
+  right: 40px;
+  z-index: 11;
+  cursor: pointer;
+  outline: 0;
+  border: none;
+  background: transparent;
   transform: rotate(180deg);
-  left: 1310px;
 
   @include vp-1365 {
-    left: 714px;
-    top: 212px;
+    top: 208px;
+    right: 38px;
   }
 
   @include vp-767 {
-    left: 293px;
-    top: 192px;
+    right: 25px;
+    top: 197px;
+  }
+
+  svg {
+    color: #102654;
+
+    @include vp-767 {
+      width: 10px;
+      height: 19px;
+    }
+  }
+
+  @include hover-focus {
+    @media (hover: hover) {
+      &:hover:not(.focus-visible) {
+        &::before {
+          position: absolute;
+          content: "";
+          width: 56px;
+          height: 56px;
+          border-radius: 50%;
+          border: 1px solid #102654;
+          top: -10px;
+          right: -30px;
+        }
+      }
+
+      &.focus-visible:focus {
+        outline: none;
+      }
+    }
+
+    @include active {
+      &:active:not(.focus-visible) {
+        svg {
+          color: $color-default-white;
+          z-index: 1;
+        }
+
+        &:before {
+          background-color: #102654;
+          z-index: -1;
+        }
+      }
+    }
+  }
+
+  &[disabled] {
+    svg {
+      opacity: 0.3;
+    }
+
+    background-color: transparent;
+    pointer-events: none;
   }
 }
-

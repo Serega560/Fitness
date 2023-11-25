@@ -1,5 +1,6 @@
 .description {
   position: relative;
+
 }
 
 .description__main {
@@ -103,7 +104,7 @@
   }
 
   @include vp-767 {
-    width: 279px;
+    width: 100%;
     text-align: left;
     font-size: 14px;
     line-height: 22px;
@@ -113,22 +114,44 @@
 }
 
 .description__media {
-  position: relative;
   background-color: #102654;
 
-  img {
+  @include vp-767 {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+}
 
-    @include vp-767 {
-      width: 320px;
-      margin-left: -15px;
-    }
+.description__iframe {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  top: -112px;
+  left: -63px;
+
+  @include vp-1365 {
+    top: -84px;
+    left: 197px;
+  }
+
+  @include vp-767 {
+    top: 40px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-self: center;
+    justify-self: center;
   }
 }
 
 .description__video {
   position: absolute;
-  left: -63px;
-  top: 288px;
+  left: 0;
+  top: 0;
 
   ::before {
     content: "";
@@ -138,16 +161,11 @@
     background-color: #14367a20;
     width: 100%;
     height: 100%;
-  }
 
-  @include vp-1365 {
-    left: 206px;
-    top: 261px;
-  }
-
-  @include vp-767 {
-    left: -14px;
-    top: 353px;
+    @include vp-767 {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   img {
@@ -156,10 +174,9 @@
     object-fit: contain;
 
     @include vp-767 {
-      width: 320px;
+      margin: 0 auto;
       height: 167px;
       object-fit: cover;
-      margin-left: -1px;
     }
   }
 
@@ -167,9 +184,22 @@
     position: absolute;
     left: 0;
     top: 0;
-    width: 364px;
-    height: 228px;
+    width: 350px;
+    height: 200px;
+
+    @include vp-1365 {
+      width: 265px;
+      height: 167px;
+    }
+
+    @include vp-767 {
+      left: 0;
+      top: 0;
+      width: 330px;
+      height: 167px;
+    }
   }
+
 }
 
 button:disabled {
@@ -224,7 +254,7 @@ button:disabled {
   }
 
   @include vp-767 {
-    left: 124px;
+    left: 105px;
   }
 
   @include active {
